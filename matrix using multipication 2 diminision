@@ -1,0 +1,53 @@
+#include<stdio.h>
+
+#define COLUMN 3
+#define ROW 3
+
+void main()
+{
+  int matrix1[ROW][COLUMN], matrix2[ROW][COLUMN], matrix3[ROW][COLUMN];
+  int i,j,k, mul;
+  
+  printf("\nEnter Matrix1: \n");
+  for(i=0;i<ROW;i++)
+  {
+    for(j=0;j<COLUMN;j++)
+    {
+      matrix3[i][j] = 0;
+      scanf("%d", &matrix1[i][j]);
+    }
+  }
+  printf("\nEnter Matrix2: \n");                                                  
+  for(i=0;i<ROW;i++)                                                            
+  {                                                                             
+    for(j=0;j<COLUMN;j++)                                                       
+    {                                                                           
+      scanf("%d", &matrix2[i][j]);                                              
+    }                                                                           
+  } 
+  if(ROW!=COLUMN)
+  {
+    printf("\nError: First matrix column and second matrix row size is not same.");
+    return;
+  }
+  for(i=0;i<ROW;i++)
+  {
+    for(j=0;j<COLUMN;j++)                                                            
+    {                                                                             
+      for(k=0;k<ROW;k++)                                                       
+      {
+        mul = matrix1[i][k] * matrix2[k][j];                                                                           
+        matrix3[i][j] = matrix3[i][j] + mul;
+      }                                                                           
+    } 
+  }
+  printf("\nMatrix Multiplication: \n");                                                  
+  for(i=0;i<ROW;i++)                                                            
+  {                                                                             
+    for(j=0;j<COLUMN;j++)                                                       
+    {                                                                           
+      printf("%d\t", matrix3[i][j]);                                              
+    }                                                                           
+    printf("\n");
+  } 
+}
