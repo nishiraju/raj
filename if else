@@ -1,0 +1,19 @@
+#include <stdio.h>
+  
+int main()
+{
+    int i = 20;
+  
+    // Check if i is 10
+    if (i == 10)
+        printf("i is 10");
+  
+    // Since is not 10
+    // Then execute the else statement
+    else
+        printf("i is 20");
+  
+    printf("Outside if-else block");
+  
+    return 0;
+}
