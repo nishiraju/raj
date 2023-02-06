@@ -1,0 +1,21 @@
+#include <stdio.h>  
+#include <conio.h>  
+int main ()  
+{  
+    char upr[50], lwr[50]; // declare character array  
+    int i = 0;  
+      
+    printf (" Enter an upper case string: ");  
+    gets (upr); // use gets() function to take string  
+      
+    /* use while loop to iterate the character array string until '\0' not occur. */  
+    while (upr [i] != '\0')  
+    {  
+    lwr [i] = upr[i] + 32; // Add 32 to string character to convert into lower case.        i++;  
+        }     
+          
+        printf (" \n The lowercase string is: %s", lwr);  
+          
+    return 0;  
+  
+}   
